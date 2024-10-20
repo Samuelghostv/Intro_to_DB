@@ -1,17 +1,17 @@
--- 1. Create the database (if it doesn't already exist)
+-- Create the database (if it doesn't already exist)
 CREATE DATABASE IF NOT EXISTS alx_book_store;
 
--- 2. Use the database
+-- Use the database
 USE alx_book_store;
 
--- 3. Create the Authors table (with correct table and column names)
+-- Create the Authors table (with correct table and column names)
 CREATE TABLE Authors (
     author_id INT AUTO_INCREMENT PRIMARY KEY, -- Unique ID for each author
     author_name VARCHAR(255) NOT NULL,        -- Correct column name for author name
     bio TEXT                                  -- Short biography of the author
 );
 
--- 4. Create the Books table
+-- Create the Books table
 CREATE TABLE Books (
     book_id INT AUTO_INCREMENT PRIMARY KEY, -- Unique ID for each book
     title VARCHAR(255) NOT NULL,            -- Book title
@@ -21,7 +21,7 @@ CREATE TABLE Books (
     FOREIGN KEY (author_id) REFERENCES Authors(author_id) -- Ensures valid author ID
 );
 
--- 5. Create the Customers table (corrected to include customer_name VARCHAR(215))
+-- Create the Customers table (corrected to include customer_name VARCHAR(215))
 CREATE TABLE customers (
     customer_id INT AUTO_INCREMENT PRIMARY KEY, -- Unique ID for each customer
     customer_name VARCHAR(215) NOT NULL,        -- Customer's name (correct length)
@@ -30,7 +30,7 @@ CREATE TABLE customers (
     address TEXT                                -- Customer's address
 );
 
--- 6. Create the Orders table
+-- Create the Orders table
 CREATE TABLE Orders (
     order_id INT AUTO_INCREMENT PRIMARY KEY, -- Unique ID for each order
     customer_id INT NOT NULL,                -- Links to the customer who placed the order
@@ -39,7 +39,7 @@ CREATE TABLE Orders (
     FOREIGN KEY (customer_id) REFERENCES Customers(customer_id) -- Ensures valid customer ID
 );
 
--- 7. create the order_details table
+-- create the order_details table
 CREATE TABLE Order_Details (
     order_detail_id INT AUTO_INCREMENT PRIMARY KEY, -- Unique ID for each order detail
     order_id INT NOT NULL,                          -- Links to the order
