@@ -24,8 +24,8 @@ CREATE TABLE Books (
 -- 5. Create the Customers table
 CREATE TABLE Customers (
     customer_id INT AUTO_INCREMENT PRIMARY KEY, -- Unique ID for each customer
-    name VARCHAR(255) NOT NULL,                 -- Customer's name
-    email VARCHAR(255) UNIQUE NOT NULL,         -- Customer's email (must be unique)
+    name VARCHAR(215) NOT NULL,                 -- Customer's name
+    email VARCHAR(215) UNIQUE NOT NULL,         -- Customer's email (must be unique)
     phone VARCHAR(15)                           -- Customer's phone number
 );
 
