@@ -21,13 +21,13 @@ CREATE TABLE Books (
     FOREIGN KEY (author_id) REFERENCES Authors(author_id) -- Ensures valid author ID
 );
 
--- 5. Create the Customers table
-CREATE TABLE Customers (
+-- 5. Create the Customers table (corrected to include customer_name VARCHAR(215))
+CREATE TABLE customers (
     customer_id INT AUTO_INCREMENT PRIMARY KEY, -- Unique ID for each customer
-    name VARCHAR(255) NOT NULL,                 -- Customer's name
-    email VARCHAR(215) UNIQUE NOT NULL,         -- Customer's email (must be unique)
-    phone VARCHAR(15)  
-    address TEXT                                  -- Customer's phone number(new column)
+    customer_name VARCHAR(215) NOT NULL,        -- Customer's name (correct length)
+    email VARCHAR(215) UNIQUE NOT NULL,         -- Customer's email (correct length)
+    phone VARCHAR(15),                          -- Customer's phone number
+    address TEXT                                -- Customer's address
 );
 
 -- 6. Create the Orders table
