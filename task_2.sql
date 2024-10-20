@@ -26,7 +26,8 @@ CREATE TABLE Customers (
     customer_id INT AUTO_INCREMENT PRIMARY KEY, -- Unique ID for each customer
     name VARCHAR(215) NOT NULL,                 -- Customer's name
     email VARCHAR(215) UNIQUE NOT NULL,         -- Customer's email (must be unique)
-    phone VARCHAR(15)                           -- Customer's phone number
+    phone VARCHAR(15)  
+    address TEXT                                  -- Customer's phone number(new column)
 );
 
 -- 6. Create the Orders table
