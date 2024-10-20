@@ -39,15 +39,13 @@ CREATE TABLE Orders (
     FOREIGN KEY (customer_id) REFERENCES Customers(customer_id) -- Ensures valid customer ID
 );
 
--- 7. Create the Order_Details table
-CREATE TABLE Order_details (
+-- 7. create the order_details table
+CREATE TABLE order_details (
     order_detail_id INT AUTO_INCREMENT PRIMARY KEY, -- Unique ID for each order detail
     order_id INT NOT NULL,                          -- Links to the order
     book_id INT NOT NULL,                           -- Links to the book in the order
-    quantity INT NOT NULL,                          -- Quantity of the book ordered
-    FOREIGN KEY (order_id) REFERENCES Orders(order_id), -- Ensures valid order ID
-    FOREIGN KEY (book_id) REFERENCES Books(book_id)     -- Ensures valid book ID
-);
-
+    quantity DOUBLE NOT NULL,                       -- Correct data type for quantity
+    FOREIGN KEY (order_id) REFERENCES orders(order_id), -- Ensures valid order ID
+    FOREIGN KEY (book_id) REFERENCES books(book_id)     -- Ensures valid book ID
 
 
