@@ -45,7 +45,7 @@ CREATE TABLE order_details (
     order_id INT NOT NULL,                          -- Links to the order
     book_id INT NOT NULL,                           -- Links to the book in the order
     quantity DOUBLE NOT NULL,                       -- Correct data type for quantity
-    FOREIGN KEY (order_id) REFERENCES orders(order_id), -- Ensures valid order ID
-    FOREIGN KEY (book_id) REFERENCES books(book_id)     -- Ensures valid book ID
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id), -- Ensures valid order ID
+    FOREIGN KEY (book_id) REFERENCES Books(book_id)     -- Ensures valid book ID
 
 
