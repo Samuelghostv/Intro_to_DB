@@ -40,7 +40,7 @@ CREATE TABLE Orders (
 );
 
 -- 7. create the order_details table
-CREATE TABLE order_details (
+CREATE TABLE Order_Details (
     order_detail_id INT AUTO_INCREMENT PRIMARY KEY, -- Unique ID for each order detail
     order_id INT NOT NULL,                          -- Links to the order
     book_id INT NOT NULL,                           -- Links to the book in the order
