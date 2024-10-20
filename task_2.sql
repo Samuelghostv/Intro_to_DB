@@ -36,7 +36,7 @@ CREATE TABLE Orders (
     customer_id INT NOT NULL,                -- Links to the customer who placed the order
     order_date DATE,                         -- When the order was placed
     total_amount DECIMAL(10, 2),             -- Total amount of the order
-    FOREIGN KEY (customer_id) REFERENCES customers(customer_id) -- Ensures valid customer ID
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id) -- Ensures valid customer ID
 );
 
 -- 7. Create the Order_Details table
